@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment2">
+
+    <fragment
+        android:id="@+id/fuelPriceListFragment"
+        android:name="com.metoly.roomtest.Fragments.FuelPriceListFragment"
+        android:label="FuelPriceListFragment" >
+        <action
+            android:id="@+id/action_fuelPriceListFragment_to_addEditFuelFragment"
+            app:destination="@id/addEditFuelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditFuelFragment"
+        android:name="com.metoly.roomtest.Fragments.AddEditFuelFragment"
+        android:label="AddEditFuelFragment" >
+        <action
+            android:id="@+id/action_addEditFuelFragment_to_fuelPriceListFragment"
+            app:destination="@id/fuelPriceListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/citySelectionFragment"
+        android:name="com.metoly.roomtest.Fragments.CitySelectionFragment"
+        android:label="CitySelectionFragment" >
+        <action
+            android:id="@+id/action_citySelectionFragment_to_priceScreenFragment"
+            app:destination="@id/priceScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/priceScreenFragment"
+        android:name="com.metoly.roomtest.Fragments.PriceScreenFragment"
+        android:label="PriceScreenFragment" >
+        <action
+            android:id="@+id/action_priceScreenFragment_to_dieselPricesFragment"
+            app:destination="@id/dieselPricesFragment" />
+        <action
+            android:id="@+id/action_priceScreenFragment_to_gasolinePricesFragment"
+            app:destination="@id/gasolinePricesFragment" />
+        <action
+            android:id="@+id/action_priceScreenFragment_to_addEditFuelFragment"
+            app:destination="@id/addEditFuelFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gasolinePricesFragment"
+        android:name="com.metoly.roomtest.Fragments.GasolinePricesFragment"
+        android:label="GasolinePricesFragment" />
+    <fragment
+        android:id="@+id/dieselPricesFragment"
+        android:name="com.metoly.roomtest.Fragments.DieselPricesFragment"
+        android:label="DieselPricesFragment" >
+        <action
+            android:id="@+id/action_dieselPricesFragment_to_addEditFuelFragment"
+            app:destination="@id/addEditFuelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment2"
+        android:name="com.metoly.roomtest.Fragments.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment2_to_citySelectionFragment"
+            app:destination="@id/citySelectionFragment" />
+    </fragment>
+</navigation>
